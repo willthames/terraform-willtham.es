@@ -4,7 +4,7 @@ data "aws_route53_zone" "willtham_es" {
 
 resource "aws_route53_record" "willtham_es" {
   zone_id = data.aws_route53_zone.willtham_es.zone_id
-  name    = "willtham_es"
+  name    = "willtham.es"
   type    = "A"
   alias {
     name                   = aws_cloudfront_distribution.willtham_es.domain_name
